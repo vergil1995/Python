@@ -34,16 +34,24 @@
 #     if num%2 == 0:
 #         print(num)
 # s = "abcdef"
+# # C1: 
 # for n in s:
 #     print(n)        # a,b,c,d,e,f
+# # C2:
+# for n in range(len(s)):
+#     print(s[n])
+    
 ####### DO-WHILE
-############### PRINT
+############### STRING
 # a = "HelloWorld"
 # b = a[1:3]
 # c = a[-1]
 # d = a[::-1]
 # e = a[1::2]
 # f = 16101995
+# g = "hello"
+# g = "y" + g[1:]
+# print(g)            #yello
 # f_str = str(f)
 # print(a)    # HelloWorld
 # print(b)    # el
@@ -51,7 +59,7 @@
 # print(d)    # dlroWolleH
 # print(e)    # elWrd
 # print("F in INT", f)            # F in INT 16101995
-# print("F in String" + f_str)    # F in String16101995
+# print("F in String" + f_str)    # F in String16101995 + only String
 # print("F in String", f_str)     # F in String 16101995
 # print("F in INT", f, ".", "F in String", f_str) # F in INT 16101995 . F in String 16101995
 # varA = "a"
@@ -86,4 +94,18 @@
 # print(number)
 # charr = chr(number)
 # print(charr)    
-    
+x = 23
+epsilon = 0.01
+step = 0.1
+guess = 0.0
+
+while guess <= x:
+    if abs(guess**2 -x) < epsilon:
+        break
+    else:
+        guess += step
+
+if abs(guess**2 - x) >= epsilon:
+    print('failed')
+else:
+    print('succeeded: ' + str(guess))
