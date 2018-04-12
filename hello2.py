@@ -60,25 +60,40 @@
 #     result = '-' + result
 # print(result)
 
-## Convert int 10 to 2
-# Ex: 0.375 to dec. 
-# 0.375 * 2^3 = 3 is interger
-# 3 -> 0011 (binary)
-# lay 0011 chia cho 2*3 = 0011 dich phai 3 don vi -> 0.011
-x = float(input("Enter a decimal number between 0 and 1: "))
-p = 0
-while ((2**p)*x)%1 != 0:
-    print("Remainder = " + str((2**p)*x - int((2**p)*x)))
-    p+=1
-num = int(x*(2**p))
-result = ""
-if num == 0:
-    result = "0"
-while num > 0:
-    result = str(num%2) + result
-    num = num//2
+# ## Convert int 10 to 2
+# # Ex: 0.375 to dec. 
+# # 0.375 * 2^3 = 3 is interger
+# # 3 -> 0011 (binary)
+# # lay 0011 chia cho 2*3 = 0011 dich phai 3 don vi -> 0.011
+# x = float(input("Enter a decimal number between 0 and 1: "))
+# p = 0
+# while ((2**p)*x)%1 != 0:
+#     print("Remainder = " + str((2**p)*x - int((2**p)*x)))
+#     p+=1
+# num = int(x*(2**p))
+# result = ""
+# if num == 0:
+#     result = "0"
+# while num > 0:
+#     result = str(num%2) + result
+#     num = num//2
 
-for i in range(p - len(result)):
-    result = "0" + result
-result = result[0:-p] + "." + result[-p:]
-print("The binary representation of the decimal " + str(x) + " is " + result)
+# for i in range(p - len(result)):
+#     result = "0" + result
+# result = result[0:-p] + "." + result[-p:]
+# print("The binary representation of the decimal " + str(x) + " is " + result)
+
+# Newton-Raphson: Khi co guess g, co the tim dc gia tri tot hon nua
+# g - p(g)/p'(g)
+# g - guess
+# p(g) = g^2 - y
+epsilon = 0.01
+y = 24.0
+guess = y/2.0
+numGuesses = 0
+
+while abs(guess*guess - y) >= epsilon:
+    numGuesses += 1
+    guess = guess - (((guess**2) - y)/(2*guess)) # Newton-Raphson
+print("numGuesses = " + str(numGuesses))
+print("Square root of " + str(y) + " is about " + str(guess))
