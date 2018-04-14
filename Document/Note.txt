@@ -1,0 +1,25 @@
+I. Machine
+a. Syntax: Determines whether a string is legal: Xác định xem một chuỗi có hợp pháp hay không
+b. Static semantics: Determines whether a string has meaning: Xác định xem một chuỗi có ý nghĩa
+c. Semantics: Assigns a meaning to a legal sentence: Gán một ý nghĩa cho một câu hợp pháp
+II. Type
+1. Scalar Object.
+Int – interger – ex: 5
+Float – số thực – ex 3.5
+Bool – Boolean – ex True/False
+NoneType – chỉ có 1 giá trị là None
+Ví dụ:
++ dùng lệnh type() để show type of object – ex: type(5) -> int, type(True) -> bool
++ float(3) -> 3.0, int(3.9)->3
+
+II. Decomposition and Abstraction
+- Decomposition: Chia nhỏ vấn đề thành từng phần. Cần mong đợi input là gì, hành vi của nó khi đc output
+	+ Chia code thành các module có mọi thử cần thiết để sử dụng
+	+ Có thể tái sử dụng (dùng ở nhiều nơi, nhiều lần, ...)
+	+ Làm code đc tổ chức hóa và mạch lạc
+- Abstraction: Ẩn các chi tiết trong phương thức mỗi khi tính toán
+	+ Như blackbox: không thể thấy, không cần, không muốn biết chi tiết code
+	+ Ẩn giấu chi tiết code
+
+
+
