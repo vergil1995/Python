@@ -1,4 +1,4 @@
-################ BRANCH
+################################### BRANCH
 ####### IF - ELSE
 # print("Hello World")
 # x = int (input('Enter an interger :'))
@@ -89,7 +89,7 @@
 # print('numVowels is: ' + str(numVowels))
 # print('numCons is: ' + str(numCons)) 
 ############################################################
-# Convert Ansi to int Decimal
+################################### Convert Ansi to int Decimal
 # number = ord("a")
 # print(number)
 # charr = chr(number)

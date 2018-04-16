@@ -1,3 +1,4 @@
+################################### Problem 1
 # s = input("Press String here: ")
 # # Problem1: dem nguyen am
 # numberOfVowels = 0
@@ -6,7 +7,7 @@
 #         numberOfVowels += 1
 # print("Number of vowels:", numberOfVowels)
 
-# # Problem2: Dem chuoi bob
+################################### Problem 2: Dem chuoi bob
 # numberTimesBob = 0
 # num = 0
 
@@ -18,7 +19,7 @@
 #     num+=1
 # print("Number of times bob occurs is:", numberTimesBob)
 
-# # Problem 3: Tim chuoi theo thu tu dai nhat
+################################### Problem 3: Tim chuoi theo thu tu dai nhat
 s= "oyubonaenn"
 temp = ""
 subString = ""

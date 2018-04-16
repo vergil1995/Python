@@ -2,6 +2,7 @@ I. Machine
 a. Syntax: Determines whether a string is legal: Xác định xem một chuỗi có hợp pháp hay không
 b. Static semantics: Determines whether a string has meaning: Xác định xem một chuỗi có ý nghĩa
 c. Semantics: Assigns a meaning to a legal sentence: Gán một ý nghĩa cho một câu hợp pháp
+
 II. Type
 1. Scalar Object.
 Int – interger – ex: 5

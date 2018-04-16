@@ -1,4 +1,4 @@
-# # Bisection Search
+################################### Bisection Search
 # # Tinh can bac 2
 # x = 25
 # epsilon = 0.01
@@ -19,7 +19,7 @@
 # print('numGuesses = ' + str(numGuesses))
 # print(str(ans) + ' is close to square root of ' + str(x))
 
-## Mini Game Bisection Search
+################################### Mini Game Bisection Search
 # x = 100
 # epsilon = 0.5
 # low = 0
@@ -43,7 +43,7 @@
 #             print("Sorry, I did not understand your input.")
 #         ans = (high + low)/2
 
-# ## Convert int 10 to 2
+################################### Convert int 10 to 2
 # num = 19
 # if num <0:
 #     isNeg = True
@@ -60,7 +60,7 @@
 #     result = '-' + result
 # print(result)
 
-# ## Convert int 10 to 2
+################################### Convert int 10 to 2
 # # Ex: 0.375 to dec. 
 # # 0.375 * 2^3 = 3 is interger
 # # 3 -> 0011 (binary)
@@ -83,7 +83,8 @@
 # result = result[0:-p] + "." + result[-p:]
 # print("The binary representation of the decimal " + str(x) + " is " + result)
 
-# Newton-Raphson: Khi co guess g, co the tim dc gia tri tot hon nua
+################################### Newton-Raphson
+# Khi co guess g, co the tim dc gia tri tot hon nua
 # g - p(g)/p'(g)
 # g - guess
 # p(g) = g^2 - y
@@ -98,7 +99,7 @@
 # print("numGuesses = " + str(numGuesses))
 # print("Square root of " + str(y) + " is about " + str(guess))
 
-## Function
+################################### Function
 # def test_funtion(i):
 #     """ 
 #     Input: i, is positive int
@@ -158,9 +159,9 @@
 # a = 3
 # f(1)
 
-# # 5.2
+### 5.2
 # x = 12
-# def g(x):
+# def g(x):                   # x is here
 #     x = x + 1               # x trong g-scope = 13
 #     def h(y):
 #         return x + y        # 19
