@@ -102,8 +102,8 @@
 ################################### Function
 # def test_funtion(i):
 #     """ 
-#     Input: i, is positive int
-#     Return: True if i is even. Otherwise return False
+#     (Assumptions) Input: i, a positive int
+#     (Guarantees) Return: True if i is even. Otherwise return False
 #     """
 #     print(i)
 #     return i%2==0
@@ -167,3 +167,112 @@
 #         return x + y        # 19
 #     return h(6)
 # g(x)
+
+### Ex 6:
+# def printName(firstName, lastName, reverse = False):
+#     if reverse:
+#         print(firstName + ', ' + lastName)
+#     else:
+#         print(firstName, lastName)
+
+# printName("Altair", "Vergil")           # Altair Vergil
+# ## Altair2, Vergil2: muon gan thi phai tu doi so tu duoi len
+# # printName(firstName = "Altair2", "Vergil2", True)   # Fail
+# # printName(firstName = "Altair2", "Vergil2", reverse = True)     # Fail
+# printName("Altair2", "Vergil2", reverse = True)
+# printName("Altair2", lastName = "Vergil2", reverse = True)
+# printName(firstName = "Altair2", lastName = "Vergil2", reverse = True)
+##################### Lặp và Đệ qui
+# def iterPower(base, exp):
+#     '''
+#     base: int or float.
+#     exp: int >= 0
+ 
+#     returns: int or float, base^exp
+#     '''
+#     # Your code here
+#     result = 1
+#     for k in range(1, exp + 1):
+#         result *= base
+#     return result
+
+# print(iterPower(2,3))
+
+# def recurPower(base, exp):
+#     '''
+#     base: int or float.
+#     exp: int >= 0
+ 
+#     returns: int or float, base^exp
+#     '''
+#     # Your code here
+#     if exp==0 :
+#         return 1
+#     else:
+#         return base*recurPower(base, exp - 1)
+
+# print(recurPower(2,3))
+
+##################### Tower of HaNoi
+# def printMove(fr, to):
+#     print('move from ' + str(fr) + " to " + str(to))
+# def Towers(n, fr, to, spare):
+#     if n==1:
+#         printMove(fr, to)
+#     else:
+#         Towers(n-1, fr, spare, to)
+#         Towers(1, fr, to, spare)
+#         Towers(n-1, spare, to, fr)
+
+# print(Towers(4,"P1", "P2", "P3"))
+
+##################### Tim Uoc chung nho nhat
+# ## Dung lap Iteration
+# def gcdIter(a, b):
+#     '''
+#     a, b: positive integers
+    
+#     returns: a positive integer, the greatest common divisor of a & b.
+#     '''
+#     # Your code here
+#     minNum = 0
+#     result = 0
+#     if a < b:
+#         minNum = a
+#     else:
+#         minNum = b
+
+#     while minNum > 0:
+#         if (a % minNum == 0) and (b % minNum == 0):
+#             result = minNum
+#             break
+#         minNum -= 1
+#     return result
+
+# print(gcdIter(6,102))
+
+# ## Dung Recursion
+# def gcdRecur(a, b):
+#     '''
+#     a, b: positive integers
+    
+#     returns: a positive integer, the greatest common divisor of a & b.
+#     '''
+#     # Your code here
+#     if b == 0:
+#         return a
+#     else:
+#         return gcdRecur(b, a%b)
+    
+# print(gcdRecur(6,102))
+
+## Fibonacci
+def fib(x):
+    """
+    assumes x an int >= 0
+    return Fibonacci of x (ex: month rabbit)
+    """
+    if x == 0 or x == 1:
+        return 1
+    else:
+        return fib(x-1) + fib(x-2)

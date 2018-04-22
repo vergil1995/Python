@@ -22,5 +22,10 @@ II. Decomposition and Abstraction
 	+ Như blackbox: không thể thấy, không cần, không muốn biết chi tiết code
 	+ Ẩn giấu chi tiết code
 
+III. Đặc tả Specification (Xem phần Function 2_hello2.py ) 
+Contract giữa người thực hiện chức năng (the implementer of a function) và khách hàng (clients) sẽ sử dụng nó
+- Giả định (Assumptions): các điều kiện phải được đáp ứng bởi user để chạy đúng, thường là các ràng buộc về các giá trị của tham số
+- Bảo đảm (Guarantees): Các chức năng cung cấp, return gì khi giả định được cung cấp
+
 
 
