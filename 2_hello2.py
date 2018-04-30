@@ -84,10 +84,10 @@
 # print("The binary representation of the decimal " + str(x) + " is " + result)
 
 ################################### Newton-Raphson
-# Khi co guess g, co the tim dc gia tri tot hon nua
-# g - p(g)/p'(g)
-# g - guess
-# p(g) = g^2 - y
+# #Khi co guess g, co the tim dc gia tri tot hon nua
+# #g - p(g)/p'(g)
+# #g - guess
+# #p(g) = g^2 - y
 # epsilon = 0.01
 # y = 24.0
 # guess = y/2.0
@@ -266,13 +266,68 @@
     
 # print(gcdRecur(6,102))
 
-## Fibonacci
-def fib(x):
-    """
-    assumes x an int >= 0
-    return Fibonacci of x (ex: month rabbit)
-    """
-    if x == 0 or x == 1:
-        return 1
-    else:
-        return fib(x-1) + fib(x-2)
+# ## Fibonacci
+# def fib(x):
+#     """
+#     assumes x an int >= 0
+#     return Fibonacci of x (ex: month rabbit)
+#     """
+#     if x == 0 or x == 1:
+#         return 1
+#     else:
+#         return fib(x-1) + fib(x-2)
+
+# # ## Palindrome
+# def isPalindrome(s):
+#     def toChars(s):
+#         s = s.lower()
+#         ans = ''
+#         for c in s:
+#             # remove cac ky tu ko phai chu cai
+#             if c in 'abcdefghijklmnopqrstuvwxyz':
+#                 ans = ans + c
+#         return ans
+
+#     def isPal(s):
+#         if len(s) <= 1:
+#             return True
+#         else:
+#             return s[0] == s[-1] and isPal(s[1:-1])
+
+#     return isPal(toChars(s))
+
+# # isPalindrome("abcdegf 12345 fgedcba")
+
+# def isIn(char, aStr):
+#     '''
+#     char: a single character
+#     aStr: an alphabetized string
+    
+#     returns: True if char is in aStr; False otherwise
+#     '''
+#     # Your code here 
+#     # Check den ki tu cuoi cung
+#     if aStr[(len(aStr)//2) + 1:] == "" and aStr[0: (len(aStr)//2)] == "":
+#         return aStr == char
+#     elif char == aStr[len(aStr)//2]:
+#         return True
+#     elif char < aStr[len(aStr)//2]:
+#         return isIn(char, aStr[0: (len(aStr)//2)])
+#     else:
+#         return isIn(char, aStr[(len(aStr)//2) + 1:])
+
+# # print(isIn('l', 'abcijklmowz'))
+
+# ## Using File
+# # Write
+# nameHandle = open("Document/temp.txt", "w")
+# for i in range(2):
+#     name = input("Enter Name: ")
+#     nameHandle.write(name + '\n')
+# nameHandle.close()
+
+# #Read
+# nameHandle = open("Document/temp.txt", "r")
+# for line in nameHandle:
+#     print(line)
+# nameHandle.close()
