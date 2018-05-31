@@ -25,17 +25,30 @@
 
 ################################## PROB 2 ###################################################
 def lowestPayment(balance, annualInterestRate):
-    return paymentAfterMonth(12, balance, annualInterestRate)
-    
-def paymentAfterMonth(month, balance, annualInterestRate):   
-    monthInterestRate = annualInterestRate / 12.0
-    if month == 0:
-        return round(balance*monthInterestRate, 2)
-    else:  
-        minPayment = round(balance*monthInterestRate, 2)
-        unpaidBalance = balance - minPayment
-        month -= 1
-        return paymentAfterMonth(month, unpaidBalance + (monthInterestRate*unpaidBalance), annualInterestRate)
+    '''
+    Input: 
+        balance - so $ con lai phai tra
+        annualInterestRate - Lai suat hang nam
+        monthlyPaymentRate - Lai suat hang thang
+    Output:
+        balanceAfterMonth - so $ con lai sau thang
+    '''
+    minPayment = 10
+    perblance = 100
+    while perblance > 0:
+        monthlyInterest = annualInterestRate / 12.0
+        count = 0
+        perblance = balance
+        while count<12: 
+            unpaidBalance = perblance - minPayment
+            interestValue = monthlyInterest*unpaidBalance
+            perblance = unpaidBalance + interestValue
+            count+=1
+        if perblance <= 0:
+            break
+        else:
+            minPayment += 10
+    return minPayment
 
-print("Lowest Payment:", lowestPayment(4773, 0.2))
+print("Lowest Payment:", lowestPayment(balance, annualInterestRate))
 
