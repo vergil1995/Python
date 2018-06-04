@@ -24,31 +24,49 @@
 # # print("Remaining balance: ",balanceAfter1Year(484, 0.2, 0.04))
 
 ################################## PROB 2 ###################################################
-def lowestPayment(balance, annualInterestRate):
-    '''
-    Input: 
-        balance - so $ con lai phai tra
-        annualInterestRate - Lai suat hang nam
-        monthlyPaymentRate - Lai suat hang thang
-    Output:
-        balanceAfterMonth - so $ con lai sau thang
-    '''
-    minPayment = 10
+# def lowestPayment2(balance, annualInterestRate):
+#     minPayment = 10
+#     monthlyInterest = annualInterestRate / 12.0
+#     #  (balance - minPayment) > 0
+#     while 1:
+#         count = 0
+#         while count<12: 
+#             if count == 0:
+#                 perblance = balance
+#             unpaidBalance = perblance - minPayment
+#             interestValue = monthlyInterest*unpaidBalance
+#             perblance = unpaidBalance + interestValue
+#             count+=1
+#         if perblance <= 0:
+#             break
+#         else:
+#             minPayment += 10
+#     return minPayment
+
+# print("Lowest Payment:", lowestPayment2(4779, 0.2))
+
+################################## PROB 3 ###################################################
+def lowestPayment(balance, annualInterestRate):  
+    monthlyInterest = annualInterestRate / 12.0
+    high = (balance * (1+monthlyInterest)**12) / 12.0
+    low = balance/12
+    minPayment = (high + low) / 2.0
     perblance = 100
-    while perblance > 0:
-        monthlyInterest = annualInterestRate / 12.0
+    while perblance != 0.0:
         count = 0
-        perblance = balance
-        while count<12: 
+        while count < 12: 
+            if count == 0:
+                perblance = balance
             unpaidBalance = perblance - minPayment
             interestValue = monthlyInterest*unpaidBalance
             perblance = unpaidBalance + interestValue
             count+=1
-        if perblance <= 0:
-            break
+        if perblance > 0:
+            low = minPayment
         else:
-            minPayment += 10
-    return minPayment
+            high = minPayment
+        minPayment = (high + low) / 2.0 
+        perblance = round(perblance, 2)
+    return round(minPayment,2)
 
-print("Lowest Payment:", lowestPayment(balance, annualInterestRate))
-
+print("Lowest Payment:", lowestPayment(320000, 0.2))
